@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		088A848F16C948CB0014F3A4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 088A848E16C948CB0014F3A4 /* MainMenu.xib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		C994416D0D71DD3E004872BC /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = C994416C0D71DD3E004872BC /* AppController.m */; };
 		C99441790D71DD7B004872BC /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99441780D71DD7B004872BC /* WebKit.framework */; };
 		C99441830D71DFD0004872BC /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = C99441820D71DFD0004872BC /* index.html */; };
-		DD7FD8E616C5997900C1DD17 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = DD7FD8E416C5997900C1DD17 /* MainMenu.nib */; };
 		DD7FDB8B16C59D7F00C1DD17 /* animated-overlay.gif in Resources */ = {isa = PBXBuildFile; fileRef = DD7FD8EB16C59BFF00C1DD17 /* animated-overlay.gif */; };
 		DD7FDB8C16C59D7F00C1DD17 /* ui-bg_flat_0_aaaaaa_40x100.png in Resources */ = {isa = PBXBuildFile; fileRef = DD7FD8EC16C59BFF00C1DD17 /* ui-bg_flat_0_aaaaaa_40x100.png */; };
 		DD7FDB8D16C59D7F00C1DD17 /* ui-bg_flat_75_ffffff_40x100.png in Resources */ = {isa = PBXBuildFile; fileRef = DD7FD8ED16C59BFF00C1DD17 /* ui-bg_flat_75_ffffff_40x100.png */; };
@@ -36,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		088A848E16C948CB0014F3A4 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -49,7 +50,6 @@
 		C994416C0D71DD3E004872BC /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		C99441780D71DD7B004872BC /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		C99441820D71DFD0004872BC /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
-		DD7FD8E516C5997900C1DD17 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		DD7FD8EB16C59BFF00C1DD17 /* animated-overlay.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "animated-overlay.gif"; sourceTree = "<group>"; };
 		DD7FD8EC16C59BFF00C1DD17 /* ui-bg_flat_0_aaaaaa_40x100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ui-bg_flat_0_aaaaaa_40x100.png"; sourceTree = "<group>"; };
 		DD7FD8ED16C59BFF00C1DD17 /* ui-bg_flat_75_ffffff_40x100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ui-bg_flat_75_ffffff_40x100.png"; sourceTree = "<group>"; };
@@ -753,9 +753,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				088A848E16C948CB0014F3A4 /* MainMenu.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
-				DD7FD8E416C5997900C1DD17 /* MainMenu.nib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1871,7 +1871,7 @@
 				DD7FDB9A16C59D7F00C1DD17 /* jquery-ui-1.10.0.custom.min.css in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				C99441830D71DFD0004872BC /* index.html in Resources */,
-				DD7FD8E616C5997900C1DD17 /* MainMenu.nib in Resources */,
+				088A848F16C948CB0014F3A4 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1896,14 +1896,6 @@
 				089C165DFE840E0CC02AAC07 /* English */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		DD7FD8E416C5997900C1DD17 /* MainMenu.nib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DD7FD8E516C5997900C1DD17 /* English */,
-			);
-			name = MainMenu.nib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

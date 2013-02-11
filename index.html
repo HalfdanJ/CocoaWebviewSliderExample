@@ -16,13 +16,15 @@
                   $( "#amount" ).val( "aspodkpoaskd" );
                   
                   $(".slider").append('<input type="text" id="amount" class="channelInput"  />');
+                  $(".slider").append('<div class="channelTitle"></div>');
+                  
+                  $(".channelTitle").each(function() {
+                                          $(this).html($(this).parent().attr('id'));
+                                          });
                   
                   
                   $(".channelInput").change(function() {
-                                            console.log($(this).val());
                                             SetChannel($(this).parent().attr('id'), $(this).val());
-
-                                            //$(this).parent
                                             });
                   
                   $( ".slider" ).slider({
@@ -30,10 +32,7 @@
                                         orientation: 'vertical',
                                         max: 127,
                                         slide: function( event, ui ) {
-                                            //$(ui.handle).parent().find( "#amount" ).val( ui.value );
-                                        
-                                            //window.AppController.setChannel_toValue_($(ui.handle).parent().attr('id'),ui.value);
-                                        SetChannel($(ui.handle).parent().attr('id') , ui.value);
+                                            SetChannel($(ui.handle).parent().attr('id') , ui.value);
                                         }
                                         });
                   
@@ -80,8 +79,19 @@
         }
         .slider {
             float: left;
-            margin-right: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
             height: 180px;
+            margin-bottom:70px;
+            top:20px;
+        }
+        
+        .channelTitle{
+
+            position:absolute;
+            top:-20px;
+            width:20px;
+            text-align:center;
         }
         
         .channelInput{
