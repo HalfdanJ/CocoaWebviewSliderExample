@@ -63,12 +63,58 @@
         }
         [[themeChooser menu] addItem:menuItem];
     }
+    
+    
+    
+    //----------------
+    
+    self.oscClient = [[F53OSCClient alloc] init];
+    self.oscClient.delegate = self;
+    self.oscClient.host = @"halfdanj.local";
+    self.oscClient.port = 1111;
+    self.oscClient.useTcp = NO;
+    
+    BOOL connect = [self.oscClient connect];
+    if(!connect){
+        NSLog(@"Could not connect client");
+    }
+    
+   self.oscServer = [[F53OSCServer alloc] init];
+   self.oscServer.delegate = self;
+    self.oscServer.port = 1313;
+    [self.oscServer startListening];
+    
+    
+    self.channels = [NSMutableArray arrayWithCapacity:16];
+    for(int i=0;i<16;i++){
+        [self.channels addObject:@(0)];
+    }
+    
+    
+}
+
+-(void)takeMessage:(F53OSCMessage *)message{
+    NSLog(@"Mssage %@",message);
+    
+    if([message.addressPattern isEqualToString:@"/channel/set"]){
+        int channel = [message.arguments[0] intValue];
+        int value = [message.arguments[1] intValue]/2;
+        
+        [self.channels removeObjectAtIndex:channel-1];
+        [self.channels insertObject:@(value) atIndex:channel-1];
+        
+        
+//        [[webView windowScriptObject] callWebScriptMethod:@"SetChannel" withArguments:@[@(1),@(100)]];
+        [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"SetChannel(%i,%i);",channel,value]];
+//        [[webView windowScriptObject] evaluateWebScript:@"SetChannel(1,100)"];
+    }
+    
 }
 
 
 - (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame
 {
-    // The HTML document just loaded, so we'll grab the current content of 
+    // The HTML document just loaded, so we'll grab the current content of
     // the 'contentTitle' H1 tag, and put it in the titleText NSTextField.
     // This code shows you how to get a value from the HTML document.
     
@@ -143,8 +189,19 @@
     NSLog(@"JSLog: %@", aMessage);
 }
 
-- (void)setChannel:(NSString *)channel toValue:(int)value{
-    NSLog(@"%@ %i",channel,value);
+- (void)setChannel:(int)channel toValue:(int)value{
+    NSLog(@"%i %i %@",channel,value, self.channels);
+    
+    if([self.channels[channel-1] intValue] != value){
+    
+    F53OSCMessage * packet = [F53OSCMessage messageWithString:@"/pluginProperty/set"] ;
+    packet.arguments = @[@"Dmx", [NSString stringWithFormat:@"channel%02i",channel], @(value*2)];
+    [self.oscClient sendPacket:packet];
+        
+        [self.channels removeObjectAtIndex:channel-1];
+        [self.channels insertObject:@(value) atIndex:channel-1];
+    }
+
 }
 
 

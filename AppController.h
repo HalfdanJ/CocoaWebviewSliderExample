@@ -9,7 +9,9 @@
 #import <Cocoa/Cocoa.h>
 #import <WebKit/WebKit.h>
 
-@interface AppController : NSObject {
+#import "F53OSC.h"
+
+@interface AppController : NSObject <F53OSCPacketDestination> {
     IBOutlet WebView *webView;
     IBOutlet NSPopUpButton *themeChooser;
     IBOutlet NSTextField *titleText;
@@ -21,5 +23,11 @@
 
 // This method is called from JavaScript on the web page.
 - (void)showMessage:(NSString *)message;
+
+
+@property F53OSCClient * oscClient;
+@property F53OSCServer * oscServer;
+
+@property NSMutableArray * channels;
 
 @end

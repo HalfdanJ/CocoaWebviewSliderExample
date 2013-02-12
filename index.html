@@ -37,17 +37,19 @@
                                         });
                   
                   
-                  var SetChannel = function($channel, $value){
-                    $("#"+$channel).find( "#amount" ).val($value );
-                    $("#"+$channel).slider('value', $value);
-                  };
+                 
                   
                   for(var i=0;i<16;i++){
-                    SetChannel(i,0);
+                    SetChannel(i+1,0);
                   }
                   });
                 
-                
+                var SetChannel = function($channel, $value){
+                    $("#"+$channel).find( "#amount" ).val($value );
+                    $("#"+$channel).slider('value', $value);
+                    AppController.setChannel_toValue_($channel,$value);
+                    //                  consoleLog_(123);
+                };
                 //$('.ui-slider-handle').height(50)
                 
                 </script>
