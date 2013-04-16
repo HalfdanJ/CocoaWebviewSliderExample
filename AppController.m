@@ -70,7 +70,7 @@
     
     self.oscClient = [[F53OSCClient alloc] init];
     self.oscClient.delegate = self;
-    self.oscClient.host = @"halfdanj.local";
+    self.oscClient.host = @"localhost";
     self.oscClient.port = 1111;
     self.oscClient.useTcp = NO;
     
@@ -94,11 +94,12 @@
 }
 
 -(void)takeMessage:(F53OSCMessage *)message{
-    NSLog(@"Mssage %@",message);
     
     if([message.addressPattern isEqualToString:@"/channel/set"]){
         int channel = [message.arguments[0] intValue];
         int value = [message.arguments[1] intValue]/2;
+        
+        if(channel <= 16){
         
         [self.channels removeObjectAtIndex:channel-1];
         [self.channels insertObject:@(value) atIndex:channel-1];
@@ -106,6 +107,7 @@
         
 //        [[webView windowScriptObject] callWebScriptMethod:@"SetChannel" withArguments:@[@(1),@(100)]];
         [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"SetChannel(%i,%i);",channel,value]];
+        }
 //        [[webView windowScriptObject] evaluateWebScript:@"SetChannel(1,100)"];
     }
     
@@ -195,7 +197,7 @@
     if([self.channels[channel-1] intValue] != value){
     
     F53OSCMessage * packet = [F53OSCMessage messageWithString:@"/pluginProperty/set"] ;
-    packet.arguments = @[@"Dmx", [NSString stringWithFormat:@"channel%02i",channel], @(value*2)];
+    packet.arguments = @[@"DmxOutput", [NSString stringWithFormat:@"channel%02i",channel], @(value*2)];
     [self.oscClient sendPacket:packet];
         
         [self.channels removeObjectAtIndex:channel-1];

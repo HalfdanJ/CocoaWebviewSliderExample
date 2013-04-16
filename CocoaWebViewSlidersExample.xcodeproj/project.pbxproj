@@ -25,7 +25,6 @@
 		088A84C016C94B380014F3A4 /* NSString+F53OSCString.m in Sources */ = {isa = PBXBuildFile; fileRef = 088A84B016C94B380014F3A4 /* NSString+F53OSCString.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		088A84C116C94B380014F3A4 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 088A84B116C94B380014F3A4 /* README.markdown */; };
 		088A84C316C94CBF0014F3A4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088A84C216C94CBF0014F3A4 /* Security.framework */; };
-		088A84CB16C954DC0014F3A4 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 088A84CA16C954DC0014F3A4 /* icon.icns */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -89,7 +88,6 @@
 		088A84B016C94B380014F3A4 /* NSString+F53OSCString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+F53OSCString.m"; sourceTree = "<group>"; };
 		088A84B116C94B380014F3A4 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 		088A84C216C94CBF0014F3A4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		088A84CA16C954DC0014F3A4 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -98,7 +96,7 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* SkinnableApp_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkinnableApp_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* Light Master 5000.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Light Master 5000.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1107320486CEB800E47090 /* Cocoa WebView Slider Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cocoa WebView Slider Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C994416B0D71DD3E004872BC /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		C994416C0D71DD3E004872BC /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		C99441780D71DD7B004872BC /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
@@ -818,7 +816,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107320486CEB800E47090 /* Light Master 5000.app */,
+				8D1107320486CEB800E47090 /* Cocoa WebView Slider Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -826,7 +824,6 @@
 		29B97314FDCFA39411CA2CEA /* SkinnableApp */ = {
 			isa = PBXGroup;
 			children = (
-				088A84C216C94CBF0014F3A4 /* Security.framework */,
 				DD7FD8E716C59BFF00C1DD17 /* jquery-ui.custom */,
 				C99441810D71DFBE004872BC /* Themes */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -850,7 +847,6 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				088A84CA16C954DC0014F3A4 /* icon.icns */,
 				088A848E16C948CB0014F3A4 /* MainMenu.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
@@ -861,6 +857,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				088A84C216C94CBF0014F3A4 /* Security.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
@@ -1918,7 +1915,7 @@
 			name = SkinnableApp;
 			productInstallPath = "$(HOME)/Applications";
 			productName = SkinnableApp;
-			productReference = 8D1107320486CEB800E47090 /* Light Master 5000.app */;
+			productReference = 8D1107320486CEB800E47090 /* Cocoa WebView Slider Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1926,7 +1923,7 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "LightDesk" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CocoaWebViewSlidersExample" */;
 			compatibilityVersion = "Xcode 3.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -1972,7 +1969,6 @@
 				088A848F16C948CB0014F3A4 /* MainMenu.xib in Resources */,
 				088A84BC16C94B380014F3A4 /* LICENSE.txt in Resources */,
 				088A84C116C94B380014F3A4 /* README.markdown in Resources */,
-				088A84CB16C954DC0014F3A4 /* icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2043,7 +2039,7 @@
 					"\"$(SRCROOT)/../ofxCocoaPlugins/ofxCocoaPlugins/libs/openframeworks/addons/ofxOsc/libs/oscpack/lib/win_cb\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				PRODUCT_NAME = "Light Master 5000";
+				PRODUCT_NAME = "Cocoa WebView Slider Example";
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
 			};
@@ -2073,7 +2069,7 @@
 					"\"$(SRCROOT)/../ofxCocoaPlugins/ofxCocoaPlugins/libs/openframeworks/addons/ofxOsc/libs/oscpack/lib/win_cb\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				PRODUCT_NAME = "Light Master 5000";
+				PRODUCT_NAME = "Cocoa WebView Slider Example";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -2114,7 +2110,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "LightDesk" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CocoaWebViewSlidersExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
